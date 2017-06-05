@@ -1,0 +1,22 @@
+{
+	"name": "hello-web-servers",
+	"version": "1.0.0",
+	"description": "- **Name:** Roel Cabrera - **Github handle:** CabreraRR - **Team name:** #envious-steenbuck",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CabreraRR/hello-web-servers.git"
+	},
+	"author": "CabreraRR, Roel Cabrera",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/CabreraRR/hello-web-servers/issues"
+	},
+	"homepage": "https://github.com/CabreraRR/hello-web-servers#readme",
+	"dependencies": {
+		"express": "^4.15.3"
+	}
+}
