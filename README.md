@@ -109,9 +109,9 @@ Setup the repo and file structure, install and configure [Express][], and get a 
   - [x] `views/`: for storing your EJS HTML templates
   - [x] `public/`: for storing static files like CSS and images
   - [x] `README.md`: includes overview of your repo
-- [ ] Express server can be started with `$ node server.js`
-- [ ] Server renders a page at the root route (`/`)
-- [ ] All package dependencies are defined in `package.json`
+- [x] Express server can be started with `$ node server.js`
+- [x] Server renders a page at the root route (`/`)
+- [x] All package dependencies are defined in `package.json`
 - [x] The artifact produced is properly licensed, preferably with the [MIT license][mit-license]
 
 #### Stage 2
@@ -120,17 +120,17 @@ Build out the routes and views for each page using the [EJS][] templating langua
 
 At this point, you don't need to actually _show_ any real data, just render HTML with placeholder text and images. You'll render real data in stage 3.
 
-- [ ] EJS is installed and set up for HTML templating
-- [ ] View template files are created in the `/views` subdirectory
-- [ ] Main view file is called `views/index.ejs`
-- [ ] Main view is rendered at route `/`
-- [ ] Main view shows a list of all artists (see [wireframe](#wireframes))
-- [ ] Albums view file is called `views/albums.ejs`
-- [ ] Albums view is rendered at route `/albums`
-- [ ] Albums view shows a list of all albums (see [wireframe](#wireframes))
-- [ ] Songs view file is called `views/songs.ejs`
-- [ ] Songs view is rendered at route `/songs`
-- [ ] Songs view shows a list of all songs (see [wireframe](#wireframes))
+- [x] EJS is installed and set up for HTML templating
+- [x] View template files are created in the `/views` subdirectory
+- [x] Main view file is called `views/index.ejs`
+- [x] Main view is rendered at route `/`
+- [x] Main view shows a list of all artists (see [wireframe](#wireframes))
+- [x] Albums view file is called `views/albums.ejs`
+- [x] Albums view is rendered at route `/albums`
+- [x] Albums view shows a list of all albums (see [wireframe](#wireframes))
+- [x] Songs view file is called `views/songs.ejs`
+- [x] Songs view is rendered at route `/songs`
+- [x] Songs view shows a list of all songs (see [wireframe](#wireframes))
 - [ ] Individual artist view file is called `views/artist.ejs`
 - [ ] Individual artist view is rendered at route `/artists/:artist_id`
 - [ ] Individual artist view shows a list of the artist's songs (see [wireframe](#wireframes))
