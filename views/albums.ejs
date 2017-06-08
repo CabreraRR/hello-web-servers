@@ -1,9 +1,9 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
-	<link rel="stylesheet" href="CSS/main.css" />
-	<script src="JS/main.js"></script>
+	<link rel="stylesheet" href="/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="/CSS/main.css" />
+	<script src="/JS/main.js"></script>
 </head>
 
 <body>
@@ -13,7 +13,7 @@
 			<div class="flex-container">
 				<% for (var i = 0; i < albums.length; i++) { %>
 					<a class="box" href="/album/<%= albums[i].id%>">
-						<img src="images/holding.png" height="200" width="200">
+						<img src="images/<%= albums[i].artist_id%>.<%=[i]%>.jpg" height="200" width="200">
 						<div id="artist">
 							<%= albums[i].title %>
 						</div>
@@ -23,11 +23,17 @@
 									Artist:
 									<%= artists[j].name %>
 								</div>
-								<% } %>
-									<% } %>
-										<div>Year:
-											<%= albums[i].year %>
-										</div>
+								<% var songCount = 0%>
+									<% for (var k=0; k<songs.length; k++){%>
+										<% if (songs[k].album_id == albums[i].id){%>
+											<% songCount++ %>
+												<% } %>
+													<% } %>
+														<div>Songs:
+															<%= songCount %>
+														</div>
+														<% } %>
+															<% } %>
 					</a>
 					<% } %>
 			</div>

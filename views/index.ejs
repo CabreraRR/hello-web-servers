@@ -13,7 +13,7 @@
 			<div class="flex-container">
 				<% for ( var i = 0; i < artists.length; i++) { %>
 					<a class="box" href="/artist/<%=artists[i].id%>">
-						<img src="images/holding.png" height="200" width="200">
+						<img src="images/<%= artists[i].id %>.jpg" height="200" width="200">
 						<div class="info">
 							<%= artists[i].name %>
 						</div>

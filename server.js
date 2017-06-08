@@ -10,8 +10,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 app.get('/', function (req, res) {
 	res.render('index.ejs', {
 		artists: artists,
@@ -30,7 +28,8 @@ app.get('/artist/:artist_id', function (req, res) {
 app.get('/albums', function (req, res) {
 	res.render('albums.ejs', {
 		albums: albums,
-		artists: artists
+		artists: artists,
+		songs: songs
 	});
 });
 
