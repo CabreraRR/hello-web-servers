@@ -3,51 +3,34 @@
 <head>
 	<link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="CSS/main.css" />
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="JS/main.js"></script>
 </head>
 
 <body>
 	<div class="container-fluid">
-		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-			<span class="navbar-toggler-icon"></span>
-			<img src="images/cow.png" height="100">
-			<a class="navbar-brand" href="#">Moo-sique Player</a>
-			<div class="collapse navbar-collapse">
-				<ul class="navbar-nav mr-auto mt-2 mt-md-0">
-					<li class="nav-item active">
-						<a class="nav-link" href="/">Artists <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/albums">Albums</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/songs">Songs</a>
-					</li>
-				</ul>
+		<%- include('navbar/navbar') %>
+			<p class="page-title">Albums</p>
+			<div class="flex-container">
+				<% for (var i = 0; i < albums.length; i++) { %>
+					<a class="box" href="/album/<%= albums[i].id%>">
+						<img src="images/holding.png" height="200" width="200">
+						<div id="artist">
+							<%= albums[i].title %>
+						</div>
+						<% for (var j = 0; j < artists.length; j++) { %>
+							<% if (artists[j].id === albums[i].artist_id) {%>
+								<div href="/artist/:/artist[j].id">
+									Artist:
+									<%= artists[j].name %>
+								</div>
+								<% } %>
+									<% } %>
+										<div>Year:
+											<%= albums[i].year %>
+										</div>
+					</a>
+					<% } %>
 			</div>
-		</nav>
-		<p class="page-title">Albums</p>
-		<div class="flex-container">
-			<div class="box">
-				<img src="images/lp-ht-2000.jpg" height="200" width="200">
-				<div id="artist">Hybrid Theory</div>
-				<div>Artist: Linkin Park</div>
-				<div>Songs: 12</div>
-			</div>
-			<div class="box">
-				<img src="images/lp-m-2003.jpg" height="200" width="200">
-				<div id="artist">Meteora</div>
-				<div>Artist: Linkin Park</div>
-				<div>Songs: 7</div>
-			</div>
-			<div class="box">
-				<img src="images/lp-mtm-2007.jpg" height="200" width="200">
-				<div id="artist">Minutes to Midnight</div>
-				<div>Artist: Linkin Park</div>
-				<div>Songs: 12</div>
-			</div>
-		</div>
 	</div>
 </body>
 
