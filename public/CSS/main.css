@@ -12,7 +12,6 @@ body {
 
 .page-title {
 	text-align: center;
-	margin-right: 50px;
 	font-size: 75px;
 }
 
@@ -20,7 +19,7 @@ body {
 	background: #8D7B6D;
 	display: flex;
 	width: 100vw;
-	height: 100vh;
+	height: auto;
 	flex-flow: row wrap;
 	color: #30261D;
 }
@@ -30,7 +29,7 @@ body {
 	background: #8D7B6D;
 	display: flex;
 	width: 100vw;
-	height: 100vh;
+	height: auto;
 }
 
 .box {
@@ -66,6 +65,14 @@ body {
 	background: #004643;
 	margin: 10px;
 	padding-left: 20px;
+}
+
+.artist-container {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
 }
 
 

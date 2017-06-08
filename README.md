@@ -137,8 +137,8 @@ At this point, you don't need to actually _show_ any real data, just render HTML
 - [ ] Individual album view file is called `views/album.ejs`
 - [ ] Individual album view is rendered at route `/albums/:album_id`
 - [ ] Individual album view shows a list of the album's songs (see [wireframe](#wireframes))
-- [ ] CSS is organized into one or more files in the `public/` directory
-- [ ] CSS declarations are well-named and formatted (consider using this [small guide](http://tinystride.com/articles/organized-css-a-small-guide/))
+- [x] CSS is organized into one or more files in the `public/` directory
+- [x] CSS declarations are well-named and formatted (consider using this [small guide](http://tinystride.com/articles/organized-css-a-small-guide/))
 
 #### Stage 3
 
@@ -146,15 +146,15 @@ Integrate a "fake database" by rendering static data sets of artists, albums, an
 
 Use the [fake data set](#fake-data) provided.
 
-- [ ] Main view (`/`) shows all artists from the [fake artists data](#fake-data).
-- [ ] Main view shows artist name and genre.
+- [x] Main view (`/`) shows all artists from the [fake artists data](#fake-data).
+- [x] Main view shows artist name and genre.
 - [ ] Artist name on main view links to the artist view (`/artists/:artist_id`).
-- [ ] Album list view (`/albums`) shows all albums from the [fake album data](#fake-data).
-- [ ] Album list view shows the name of the artist for each album.
+- [x] Album list view (`/albums`) shows all albums from the [fake album data](#fake-data).
+- [x] Album list view shows the name of the artist for each album.
 - [ ] Album name on album list view links to the album view (`/albums/:album_id`).
 - [ ] Artist name on album list view links to the artist view (`/artists/:artist_id`).
-- [ ] Song list view (`/songs`) shows all songs from the [fake song data](#fake-data).
-- [ ] Song list view shows song title, artist, album, and song length in seconds.
+- [x] Song list view (`/songs`) shows all songs from the [fake song data](#fake-data).
+- [x] Song list view shows song title, artist, album, and song length in seconds.
 - [ ] Artist view (`/artists/:artist_id`) shows all albums for the artists with id `:artist_id` from the [fake artist data](#fake-data).
     **Hint:** you can [filter][array-filter] the albums by their `artist_id` property.
 - [ ] Artist view shows artist name and genre.
@@ -170,18 +170,18 @@ Use the [fake data set](#fake-data) provided.
 
 Improve the views by adding _summary_ data (e.g. song count for album), parsing the song length into minutes and seconds, showing actual album artwork and artist profile images, and integrating a CSS framework to make it prettier.
 
-- [ ] Main view (`/`) shows an album count for each artist.
+- [x] Main view (`/`) shows an album count for each artist.
 - [ ] Album list view (`/albums`) shows a song count for each album.
 - [ ] Artist view (`/artists/:artist_id`) shows an album count for the artist.
 - [ ] Artist view (`/artists/:artist_id`) shows a song count for each album.
 - [ ] Album view (`/albums/:album_id`) shows a song count for the album.
-- [ ] On all views that show song length, the length is shown in `mm:ss` format.
+- [x] On all views that show song length, the length is shown in `mm:ss` format.
     For example, if the song has a length of 286 seconds, then it would be shown as `04:46` (286 seconds = 4 minutes, 46 seconds).
 - [ ] Actual album images are used instead of placeholders on albums list (`/albums`), artist (`/artists/:artist_id`), and album (`/albums/:album_id`) views.
     **Hint:** once you find an image (Google image search is a good place for this), you can add the URL to the `albums.json` fake data file.
 - [ ] Actual artist profile images are used instead of placeholders on main view (`/`) and artist view (`/artists/:artist_id`).
     **Hint:** once you find an image (Google image search is a good place for this), you can add the URL to the `artists.json` fake data file.
-- [ ] App uses a CSS framework like [Twitter bootstrap][bootstrap] or Yahoo's [Pure.css][pure-css].
+- [x] App uses a CSS framework like [Twitter bootstrap][bootstrap] or Yahoo's [Pure.css][pure-css].
 
 #### Stage 5
 
