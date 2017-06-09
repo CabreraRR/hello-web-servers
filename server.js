@@ -27,7 +27,7 @@ app.get('/artist/:artist_id', function (req, res) {
 		songs: songs,
 		id: artist.id,
 		name: artist.name,
-		genre: artist.genre
+		genre: artist.genre,
 	});
 });
 
@@ -49,7 +49,8 @@ app.get('/album/:album_id', function (req, res) {
 		id: album.id,
 		artist: album.artist_id,
 		title: album.title,
-		year: album.year
+		year: album.year,
+		pic: album.pic
 	});
 });
 

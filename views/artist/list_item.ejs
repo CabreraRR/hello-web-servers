@@ -1,0 +1,24 @@
+<div class="flex-container">
+	<% albums.forEach(function(albums){%>
+		<% if (albums.artist_id == id) {%>
+			<a class="box" href="/album/<%=albums.id%>">
+						<img src="/images/<%= albums.pic %>.jpg" height="200" width="200">
+						<div>
+							<%= albums.title%>
+						</div>
+						<div>Year:
+							<%=albums.year%>
+						</div>
+						<%var songCount = 0 %>
+							<% songs.forEach(function(songs){ %>
+								<% if (songs.album_id==id) { %>
+									<% songCount++ %>
+										<% } %>
+											<% }) %>
+												<div>Songs:
+													<%= songCount %>
+												</div>
+					</a>
+			<%}%>
+				<%})%>
+</div>

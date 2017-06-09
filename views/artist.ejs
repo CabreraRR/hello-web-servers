@@ -8,50 +8,27 @@
 </head>
 
 <body>
-	<div class="container-fluid">
-		<%- include('navbar/navbar') %>
-			<p class="page-title">Artist</p>
-			<div class="artist-container">
-				<div>
-					<img src="/images/<%=id%>.jpg" height="200" style="margin-right:20px">
-				</div>
-				<div>
-					<h1>
-						<%=name%>
-					</h1>
 
-					<div>Albums:
-					</div>
-					<div>Genre:
-						<%=genre%>
-					</div>
+	<%- include('navbar/navbar') %>
+		<p class="page-title">Artist</p>
+		<div class="artist-container">
+			<div>
+				<img src="/images/<%=id%>.jpg" height="200" style="margin-right:20px">
+			</div>
+			<div>
+				<h1>
+					<%=name%>
+				</h1>
+
+				<div>Albums:
+				</div>
+				<div>Genre:
+					<%=genre%>
 				</div>
 			</div>
-			<div class="flex-container">
-				<% albums.forEach(function(albums){%>
-					<% if (albums.artist_id == id) {%>
-						<a class="box" href="/album/<%=albums.id%>">
-							<img src="/images/holding.png" height="200" width="200">
-							<div>
-								<%= albums.title%>
-							</div>
-							<div>Year:
-								<%=albums.year%>
-							</div>
-							<%var songCount = 0 %>
-								<% songs.forEach(function(songs){ %>
-									<% if (songs.album_id==id) { %>
-										<% songCount++ %>
-											<% } %>
-												<% }) %>
-													<div>Songs:
-														<%= songCount %>
-													</div>
-						</a>
-						<%}%>
-							<%})%>
-			</div>
-	</div>
+		</div>
+		<%- include('artist/list_item') %>
+
 </body>
 
 </html>

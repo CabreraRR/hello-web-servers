@@ -6,45 +6,25 @@
 </head>
 
 <body>
-	<div class="container-fluid">
-		<%- include('navbar/navbar') %>
-			<p class="page-title">Album</p>
-			<div class="artist-container">
-				<div>
-					<img src="/images/<%=artist%>.<%=id -1%>.jpg" height="200" style="margin-right:20px">
+
+	<%- include('navbar/navbar') %>
+		<p class="page-title">Album</p>
+		<div class="artist-container">
+			<div>
+				<img src="/images/<%=pic%>.jpg" height="200" style="margin-right:20px">
+			</div>
+			<div>
+				<h1>
+					<%= title%>
+				</h1>
+				<div> Artist:
+					<%= artists[artist -1].name %>
 				</div>
-				<div>
-					<h1>
-						<%= title%>
-					</h1>
-					<div> Artist:
-						<%= artists[artist -1].name %>
-					</div>
-					<div> Year:
-						<%= year %>
-					</div>
+				<div> Year:
+					<%= year %>
 				</div>
 			</div>
-			<div class="song-container">
-				<div class="song-heading">
-					<div class=""></div>
-					<div class="col-4 offset-3">Song</div>
-					<div class="col-2">Length</div>
-				</div>
-				<% songs.forEach(function(songs){ %>
-					<% if (songs.album_id == id) { %>
-						<div class="song">
-							<div class="col-4 offset-3">
-								<%= songs.title %>
-							</div>
-							<% var minutes = Math.floor(songs.length/60) %>
-								<% var seconds =(( "0" + (songs.length % 60)).slice(-2)) %>
-									<div class="col-2">
-										<%= minutes + ":" + seconds %>
-									</div>
-						</div>
-						<% } %>
-							<% }) %>
-			</div>
-	</div>
+		</div>
+		<%- include('album/list_item') %>
+
 </body>

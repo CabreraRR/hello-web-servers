@@ -1,0 +1,23 @@
+<div class="flex-container">
+	<% for ( var i = 0; i < artists.length; i++) { %>
+		<a class="box" href="/artist/<%=artists[i].id%>">
+						<img src="images/<%= artists[i].id %>.jpg" height="200" width="200">
+						<div class="info">
+							<%= artists[i].name %>
+						</div>
+						<% let count = 0 %>
+							<% for (var j = 0; j < albums.length; j++) { %>
+								<% if (albums[j].artist_id === artists[i].id){ %>
+									<% count++ %>
+										<% } %>
+											<% } %>
+												<div>
+													Albums:
+													<%= count %>
+												</div>
+												<div>Genre:
+													<%= artists[i].genre%>
+												</div>
+					</a>
+		<% } %>
+</div>

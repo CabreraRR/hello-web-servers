@@ -1,0 +1,32 @@
+<div class="song-container">
+	<div class="song-heading">
+		<div class="col-4">Song</div>
+		<div class="col-4">Album</div>
+		<div class="col-2">Artist</div>
+		<div class="col-2">Length</div>
+	</div>
+	<%  songs.forEach(function(song){ %>
+		<div class="song">
+			<div class="col-4">
+				<%= song.title %>
+			</div>
+			<%  artists.forEach(function(artist){ %>
+				<%  albums.forEach(function(album){ %>
+					<% if (album.artist_id == artist.id && song.album_id == album.id) { %>
+						<a class="col-4" href="/album/<%=album.id%>">
+							<%=  album.title  %>
+						</a>
+						<a class="col-2" href="/artist/<%=artist.id%>">
+							<%= artist.name %>
+						</a>
+						<% var minutes = Math.floor(song.length/60) %>
+							<% var seconds =(( "0" + (song.length % 60)).slice(-2)) %>
+								<div class="col-2">
+									<%= minutes + ":" + seconds %>
+								</div>
+		</div>
+		<% }; %>
+			<% }) %>
+				<% }) %>
+					<% }) %>
+</div>
