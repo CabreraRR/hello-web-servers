@@ -34,6 +34,8 @@ body {
 	display: flex;
 	width: 80vw;
 	height: auto;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .box {

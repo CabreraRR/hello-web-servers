@@ -1,40 +1,19 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
-	<link rel="stylesheet" href="CSS/main.css" />
+	<link rel="stylesheet" href="/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="/CSS/main.css" />
 	<script src="JS/main.js"></script>
 	<title>HOME</title>
 </head>
 
 <body>
-	<div class="container-fluid">
-		<%- include('navbar/navbar') %>
-			<p class="page-title">Artist</p>
-			<div class="flex-container">
-				<% for ( var i = 0; i < artists.length; i++) { %>
-					<a class="box" href="/artist/<%=artists[i].id%>">
-						<img src="images/<%= artists[i].id %>.jpg" height="200" width="200">
-						<div class="info">
-							<%= artists[i].name %>
-						</div>
-						<% let count = 0 %>
-							<% for (var j = 0; j < albums.length; j++) { %>
-								<% if (albums[j].artist_id === artists[i].id){ %>
-									<% count++ %>
-										<% } %>
-											<% } %>
-												<div>
-													Albums:
-													<%= count %>
-												</div>
-												<div>Genre:
-													<%= artists[i].genre%>
-												</div>
-					</a>
-					<% } %>
-			</div>
-	</div>
+
+	<%- include('navbar/navbar') %>
+		<p class="page-title">Artist</p>
+
+		<%- include('artists/list_item.ejs')%>
+
 </body>
 
 </html>

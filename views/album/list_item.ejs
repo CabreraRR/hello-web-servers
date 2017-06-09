@@ -1,0 +1,21 @@
+<div class="song-container">
+	<div class="song-heading">
+		<div class=""></div>
+		<div class="col-4 offset-3">Song</div>
+		<div class="col-2">Length</div>
+	</div>
+	<% songs.forEach(function(songs){ %>
+		<% if (songs.album_id == id) { %>
+			<div class="song">
+				<div class="col-4 offset-3">
+					<%= songs.title %>
+				</div>
+				<% var minutes = Math.floor(songs.length/60) %>
+					<% var seconds =(( "0" + (songs.length % 60)).slice(-2)) %>
+						<div class="col-2">
+							<%= minutes + ":" + seconds %>
+						</div>
+			</div>
+			<% } %>
+				<% }) %>
+</div>
