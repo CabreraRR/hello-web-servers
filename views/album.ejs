@@ -2,6 +2,7 @@
 	<link rel="stylesheet" href="/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="/CSS/main.css" />
 	<script src="/JS/main.js"></script>
+	<title>HOME :: ALBUMS :: ALBUM</title>
 </head>
 
 <body>
@@ -10,27 +11,40 @@
 			<p class="page-title">Album</p>
 			<div class="artist-container">
 				<div>
-					<img src="images/holding.png" height="200" style="margin-right:20px">
+					<img src="/images/<%=artist%>.<%=id -1%>.jpg" height="200" style="margin-right:20px">
 				</div>
 				<div>
-					<h1>Hybrid Theory</h1>
-					<div> Artist: Linkin Park</div>
-					<div>Genre: Alternative Rock</div>
+					<h1>
+						<%= title%>
+					</h1>
+					<div> Artist:
+						<%= artists[artist -1].name %>
+					</div>
+					<div> Year:
+						<%= year %>
+					</div>
 				</div>
 			</div>
 			<div class="song-container">
 				<div class="song-heading">
-					<div class="col-4">Song</div>
-					<div class="col-4">Artist</div>
-					<div class="col-2">Album</div>
+					<div class=""></div>
+					<div class="col-4 offset-3">Song</div>
 					<div class="col-2">Length</div>
 				</div>
-				<div class="song">
-					<div class="col-4">Papercut</div>
-					<div class="col-4">Linkin Park</div>
-					<div class="col-2">Hybrid Theory</div>
-					<div class="col-2">3:04</div>
-				</div>
+				<% songs.forEach(function(songs){ %>
+					<% if (songs.album_id == id) { %>
+						<div class="song">
+							<div class="col-4 offset-3">
+								<%= songs.title %>
+							</div>
+							<% var minutes = Math.floor(songs.length/60) %>
+								<% var seconds =(( "0" + (songs.length % 60)).slice(-2)) %>
+									<div class="col-2">
+										<%= minutes + ":" + seconds %>
+									</div>
+						</div>
+						<% } %>
+							<% }) %>
 			</div>
 	</div>
 </body>

@@ -18,10 +18,16 @@ app.get('/', function (req, res) {
 });
 
 app.get('/artist/:artist_id', function (req, res) {
+	const artist = artists.filter(function (artist) {
+		return artist.id == req.params.artist_id
+	})[0]
 	res.render('artist.ejs', {
 		artists: artists,
 		albums: albums,
-		songs: songs
+		songs: songs,
+		id: artist.id,
+		name: artist.name,
+		genre: artist.genre
 	});
 });
 
@@ -34,14 +40,18 @@ app.get('/albums', function (req, res) {
 });
 
 app.get('/album/:album_id', function (req, res) {
+	const album = albums.filter(function (album) {
+		return album.id == req.params.album_id
+	})[0]
 	res.render('album.ejs', {
+		songs: songs,
 		artists: artists,
-		albums: albums,
-		songs: songs
+		id: album.id,
+		artist: album.artist_id,
+		title: album.title,
+		year: album.year
 	});
 });
-
-
 
 app.get('/songs', function (req, res) {
 	res.render('songs.ejs', {
@@ -50,11 +60,6 @@ app.get('/songs', function (req, res) {
 		albums: albums
 	});
 });
-
-
-
-
-
 
 app.listen(3000, function () {
 	console.log('Moo-sique Player listening on port 3000!');

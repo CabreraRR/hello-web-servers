@@ -172,9 +172,9 @@ Improve the views by adding _summary_ data (e.g. song count for album), parsing 
 
 - [x] Main view (`/`) shows an album count for each artist.
 - [x] Album list view (`/albums`) shows a song count for each album.
-- [ ] Artist view (`/artists/:artist_id`) shows an album count for the artist.
-- [ ] Artist view (`/artists/:artist_id`) shows a song count for each album.
-- [ ] Album view (`/albums/:album_id`) shows a song count for the album.
+- [x] Artist view (`/artists/:artist_id`) shows an album count for the artist.
+- [x] Artist view (`/artists/:artist_id`) shows a song count for each album.
+- [x] Album view (`/albums/:album_id`) shows a song count for the album.
 - [x] On all views that show song length, the length is shown in `mm:ss` format.
     For example, if the song has a length of 286 seconds, then it would be shown as `04:46` (286 seconds = 4 minutes, 46 seconds).
 - [x] Actual album images are used instead of placeholders on albums list (`/albums`), artist (`/artists/:artist_id`), and album (`/albums/:album_id`) views.

@@ -1,6 +1,6 @@
 body {
 	background: #ECD4BA;
-	width: 100vw
+	width: 100vw;
 }
 
 .container-fluid {
@@ -9,6 +9,7 @@ body {
 
 .navbar {
 	background: #8D7B6D;
+	width: 100vw;
 }
 
 .page-title {
@@ -19,17 +20,19 @@ body {
 .flex-container {
 	background: #8D7B6D;
 	display: flex;
-	width: 100vw;
+	width: 80vw;
 	height: auto;
 	flex-flow: row wrap;
 	color: #30261D;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .song-container {
 	flex-flow: column nowrap;
 	background: #8D7B6D;
 	display: flex;
-	width: 100vw;
+	width: 80vw;
 	height: auto;
 }
 
@@ -49,10 +52,9 @@ body {
 .song-heading {
 	font-size: 3em;
 	display: flex;
-	width: 90vw;
+	width: 80vw;
 	height: 50px;
 	margin: 10px;
-	padding-left: 20px;
 	color: #30261D;
 }
 
@@ -60,7 +62,7 @@ body {
 	display: flex;
 	flex-flow: row nowrap;
 	height: 50px;
-	width: 90vw;
+	width: auto;
 	align-items: center;
 	color: #7ECCD0;
 	background: #004643;
@@ -75,55 +77,3 @@ body {
 	align-items: center;
 	margin-bottom: 50px;
 }
-
-
-/*
-NOTES
-columns needed per page
-//////INDEX//////
-list of artists
-- picture
-- name
-- number of albums
-- genre
-
-//////ALBUMS//////
-list of albums
-- album art
-- album name
-- artist
-- # of songs
-
-//////ALBUM//////
-page based on the specific album
--Album Name
-- artist name
-- year
-- # of songs
-- picture
-
-- song
-- track
-- length
-
-
-//////ARTIST//////
-page for a specific artist
-- Name
-- Albums
-- Genre
-- picture
-
-- album art
-- album name
-- year released
-- # of songs
-
-//////SONGS/////
-list of all songs
-- Song
-- Artist
-- Album
-- Length
-
-*/
