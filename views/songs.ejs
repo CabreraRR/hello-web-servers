@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="CSS/main.css" />
 	<script src="JS/main.js"></script>
+	<title>HOME :: SONGS</title>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
 									<a class="col-4" href="/album/<%=album.id%>">
 										<%=  album.title  %>
 									</a>
-									<a class="col-2" href="/artist/<%artists.name%>">
+									<a class="col-2" href="/artist/<%=artist.id%>">
 										<%= artist.name %>
 									</a>
 									<% var minutes = Math.floor(song.length/60) %>

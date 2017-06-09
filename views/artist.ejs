@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="/CSS/main.css" />
 	<script src="/JS/main.js"></script>
+	<title>HOME :: ARTISTS :: ARTISTS</title>
 </head>
 
 <body>
@@ -12,24 +13,43 @@
 			<p class="page-title">Artist</p>
 			<div class="artist-container">
 				<div>
-					<img src="/images/holding.png" height="200" style="margin-right:20px">
+					<img src="/images/<%=id%>.jpg" height="200" style="margin-right:20px">
 				</div>
 				<div>
 					<h1>
-						<%= artists.name%>
+						<%=name%>
 					</h1>
-					<div> Albums: 7</div>
+
+					<div>Albums:
+					</div>
 					<div>Genre:
-						<%= artists.genre%>
+						<%=genre%>
 					</div>
 				</div>
 			</div>
 			<div class="flex-container">
-				<div class="box">
-					<img src="/images/holding.png" height="200" width="200">
-					<div>Year: </div>
-					<div>Songs: </div>
-				</div>
+				<% albums.forEach(function(albums){%>
+					<% if (albums.artist_id == id) {%>
+						<a class="box" href="/album/<%=albums.id%>">
+							<img src="/images/holding.png" height="200" width="200">
+							<div>
+								<%= albums.title%>
+							</div>
+							<div>Year:
+								<%=albums.year%>
+							</div>
+							<%var songCount = 0 %>
+								<% songs.forEach(function(songs){ %>
+									<% if (songs.album_id==id) { %>
+										<% songCount++ %>
+											<% } %>
+												<% }) %>
+													<div>Songs:
+														<%= songCount %>
+													</div>
+						</a>
+						<%}%>
+							<%})%>
 			</div>
 	</div>
 </body>
